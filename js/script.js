@@ -51,7 +51,7 @@
 // let und;
 // console.log(und);
 
-<!--Oбьекты-->
+<!--Обьекты-->
 
 
 // const obj = {
