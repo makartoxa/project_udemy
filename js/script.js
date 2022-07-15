@@ -164,22 +164,22 @@
 
 // <!--GIT--> Система контроля версий
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-console.log(numberOfFilms);
-const personalMovieDB = {
-	count: numberOfFilms,
-	movies: {},
-	actors: {},
-	genres: [],
-	previt: false
-};
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const a = prompt('Один из последних просмотреных фильмов?', ''),
-      b = prompt('На сколько оценете его?', ''),
-			c = prompt('Один из последних просмотреных фильмов?', ''),
-			d = prompt('На сколько оценете его?', '');
+// const personalMovieDB = {
+// 	count: numberOfFilms,
+// 	movies: {},
+// 	actors: {},
+// 	genres: [],
+// 	previt: false
+// };
 
-		personalMovieDB.movies[a] = b;	
-		personalMovieDB.movies[c] = d;	
+// const a = prompt('Один из последних просмотреных фильмов?', ''),
+//       b = prompt('На сколько оценете его?', ''),
+// 			c = prompt('Один из последних просмотреных фильмов?', ''),
+// 			d = prompt('На сколько оценете его?', '');
 
-		console.log(personalMovieDB);
+// 		personalMovieDB.movies[a] = b;	
+// 		personalMovieDB.movies[c] = d;	
+
+// 		console.log(personalMovieDB);
