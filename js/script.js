@@ -454,3 +454,57 @@
 
 // console.log(result);
 
+// <!--Практика 2. Применяем условия и цыклы-->
+
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+// const personalMovieDB = {
+// 	count: numberOfFilms,
+// 	movies: {},
+// 	actors: {},
+// 	genres: [],
+// 	previt: false
+// };
+
+
+		// for (let i = 0; i < 2; i++) {
+		// 	const a = prompt('Один из последних просмотреных фильмов?', ''),
+    //   			b = prompt('На сколько оценете его?', '');
+		// 	if (a != null && b != null && a != '' & b != '' && a.length < 50) {
+		// 		personalMovieDB.movies[a] = b;
+		// 		console.log('done');
+		// 	} else {
+		// 		console.log('error');
+		// 		i--;
+		// 	}
+		// }
+
+		// <--Через for-->
+
+		// let i = 0;
+		// while(i < 2) {
+		// 	const a = prompt('Один из последних просмотреных фильмов?', ''),
+    //   			b = prompt('На сколько оценете его?', '');
+		// 				if (a != null && b != null && a != '' & b != '' && a.length < 50) {
+		// 					personalMovieDB.movies[a] = b;
+		// 					i++;
+		// 					console.log('done');
+		// 				} else {
+		// 					console.log('error');
+		// 					i--;
+		// 				}
+		// }
+
+		// if (personalMovieDB.count < 10) {
+		// 	console.log("Просмотренно довольно мало фильмов");
+		// } else if (personalMovieDB.count >= 10 && personalMovieDB < 30) {
+		// 	console.log("Вы классический зритель");
+		// } else if (personalMovieDB.count >= 30) {
+		// 	console.log("Вы киноман");
+		// } else {
+		// 	console.log("Произошла ошибка");
+		// }
+
+		// console.log(personalMovieDB);
+
+		
