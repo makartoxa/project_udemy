@@ -51,7 +51,7 @@
 // let und;
 // console.log(und);
 
-<!--Обьекты-->
+// <!--Обьекты-->
 
 
 // const obj = {
@@ -62,14 +62,14 @@
 // // console.log(obj.age);
 // console.log(obj["name"]);
 
-<!-- Массивы -->
+// <!-- Массивы -->
 
 
 // let arr = ['plum.pmg', 'orange.jpg', 6, 'apple.bmp', {}, []];
 // console.log(arr[1]);
 
 
-<!--Разница между обьектами и массивами-->
+// <!--Разница между обьектами и массивами-->
 
 // const arr = ['a', 'b', 'c'];
 
@@ -105,7 +105,7 @@
 // console.log(obj.Anna);
 
 
-<!--Простое общение с пользователем на базовом уровне-->
+// <!--Простое общение с пользователем на базовом уровне-->
 
 // alert('Hello!);
 
@@ -128,7 +128,7 @@
 // console.log(typeof(null));
 
 
-<!--Интерполяция-->
+// <!--Интерполяция-->
 
 // const category = 'toys';
 
@@ -139,7 +139,7 @@
 // alert(`Привет, ${user}`);
 
 
-<!--Операторы в JS-->
+// <!--Операторы в JS-->
 
 // console.log('arr' + " - object");
 // console.log(4 + +"5");
@@ -160,7 +160,7 @@
 // --decr;
 
 
-<!--Создание первого приложения-->
+// <!--Создание первого приложения-->
 
 // const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
@@ -183,7 +183,7 @@
 // 		console.log(personalMovieDB);
 
 
-<!--Условия-->
+// <!--Условия-->
 
 // if (4 == 4) {
 // 	console.log('okk!');
@@ -220,7 +220,7 @@
 // 		break;
 // }
 
-<!--Логические операторы-->
+// <!--Логические операторы-->
 
 // const hamburger = true;
 // const fries = true;
@@ -355,3 +355,12 @@
 // 		}
 // 	}
 // }
+
+let result = '';
+function firstTask() {
+	for (let i = 5; i <= 10; i++) {
+		console.log(i);
+		result += i;
+	}
+	console.log(result);
+}
