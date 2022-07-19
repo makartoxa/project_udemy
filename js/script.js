@@ -160,7 +160,7 @@
 // --decr;
 
 
-// <!--Создание первого приложения-->
+// <!--Практика 1. Создание первого приложения-->
 
 // const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
@@ -169,7 +169,7 @@
 // 	movies: {},
 // 	actors: {},
 // 	genres: [],
-// 	previt: false
+// 	privat: false
 // };
 
 // const a = prompt('Один из последних просмотреных фильмов?', ''),
@@ -463,7 +463,7 @@
 // 	movies: {},
 // 	actors: {},
 // 	genres: [],
-// 	previt: false
+// 	privat: false
 // };
 
 
@@ -479,7 +479,7 @@
 		// 	}
 		// }
 
-		// <--Через for-->
+		// <--Через while-->
 
 		// let i = 0;
 		// while(i < 2) {
@@ -611,31 +611,31 @@
 
 // <!--Упражнение по написанию кода, задание на работу с функциями-->
 
-function sayHello(name) {
-	return 'Привет, ' + name +'!';
- }
-console.log(sayHello('Anton'));
+// function sayHello(name) {
+// 	return 'Привет, ' + name +'!';
+//  }
+// console.log(sayHello('Anton'));
 
-function returnNeighboringNumbers(num) {
-	return [num -1, num, num + 1];
-	}
+// function returnNeighboringNumbers(num) {
+// 	return [num -1, num, num + 1];
+// 	}
 
 
-	function getMathResult(num, times) {	
-		if (typeof (times) !== 'number' || times <= 0) {
-			return num;
-		}
-		let result = '';
-		for (let i = 1; i <= times; i++) {
-			if (times === i) {
-				result += `${num * i}`;
-			} else {
-				result += `${num * i} --- `;
-			}
-		}
-		return result;
-	}
-	console.log(getMathResult(7, 9));
+// 	function getMathResult(num, times) {	
+// 		if (typeof (times) !== 'number' || times <= 0) {
+// 			return num;
+// 		}
+// 		let result = '';
+// 		for (let i = 1; i <= times; i++) {
+// 			if (times === i) {
+// 				result += `${num * i}`;
+// 			} else {
+// 				result += `${num * i} --- `;
+// 			}
+// 		}
+// 		return result;
+// 	}
+// 	console.log(getMathResult(7, 9));
 
 // 	<!--Методы и свойства у строк и чисел-->
 
@@ -673,4 +673,73 @@ function returnNeighboringNumbers(num) {
 // const test = "12.2px";
 // console.log(parseInt(test));
 // console.log(parseFloat(test));
+
+// <!--Практика 3. Используем функции-->
+
+let numberOfFilms; 
+
+function start() {
+	numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+	while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+		numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+	}
+}
+
+start();
+
+const personalMovieDB = {
+	count: numberOfFilms,
+	movies: {},
+	actors: {},
+	genres: [],
+	privat: false
+};
+
+function rememberMyFilms() {
+	for (let i = 0; i < 2; i++) {
+		const a = prompt('Один из последних просмотреных фильмов?', ''),
+					b = prompt('На сколько оценете его?', '');
+		if (a != null && b != null && a != '' & b != '' && a.length < 50) {
+			personalMovieDB.movies[a] = b;
+			console.log('done');
+		} else {
+			console.log('error');
+			i--;
+		}
+	}
+}
+
+// rememberMyFilms();
+
+function detecPersonalevel () {
+			if (personalMovieDB.count < 10) {
+				console.log("Просмотренно довольно мало фильмов");
+			} else if (personalMovieDB.count >= 10 && personalMovieDB < 30) {
+				console.log("Вы классический зритель");
+			} else if (personalMovieDB.count >= 30) {
+				console.log("Вы киноман");
+			} else {
+				console.log("Произошла ошибка");
+			}
+		}
+
+// detecPersonalevel ();
+
+function showMyDB (hidden) {
+	if (!hidden) {
+		console.log(personalMovieDB);
+	}
+}
+
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres () {
+	for (let i = 1; i <= 3; i++) {
+		const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+		personalMovieDB.genres[i - 1] = genre;
+	}
+}
+
+writeYourGenres ();
 
