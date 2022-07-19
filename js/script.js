@@ -608,3 +608,33 @@
 //  function doNothing () {};
 // console.log(doNothing() === undefined);
 
+
+// <!--Упражнение по написанию кода, задание на работу с функциями-->
+
+function sayHello(name) {
+	return 'Привет, ' + name +'!';
+ }
+console.log(sayHello('Anton'));
+
+function returnNeighboringNumbers(num) {
+	return [num -1, num, num + 1];
+	}
+
+
+	function getMathResult(num, times) {	
+		if (typeof (times) !== 'number' || times <= 0) {
+			return num;
+		}
+		let result = '';
+		for (let i = 1; i <= times; i++) {
+			if (times === i) {
+				result += `${num * i}`;
+			} else {
+				result += `${num * i} --- `;
+			}
+		}
+		return result;
+	}
+	console.log(getMathResult(7, 9));
+
+	
