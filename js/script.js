@@ -657,8 +657,9 @@
 
 // 	const logg = "Hello world";
 
-// 	console.log(logg.slice(6, 11));  // slice вкл первый аргумент, второй аргумент не вкл. Либо указать один аргумент, с какого и до конца!
-// 	console.log(logg.slice(6));
+// 	console.log(logg.slice(6, 11));  slice вкл первый аргумент, второй аргумент не вкл.
+// Либо указать один аргумент, с какого и до конца
+//  console.log(logg.slice(6));
 // 	console.log(logg.slice(-5, -1));
 
 // 	console.log(logg.substring(6, 11));  //substring, так же как и slice, но не поддерживает отрицательные значения
@@ -744,3 +745,35 @@
 
 // writeYourGenres ();
 
+
+// <!--Упражнение по написанию кода 7: Продвинутые задания на использование функций-->
+
+// function calculateVolumeAndArea(length) {
+// 	if(length !== Math.round(length) || typeof(length) !== 'number' || length <= 0) {
+// 		return `При вычислении произошла ошибка`;
+// 	}
+// 	const calculateVolume =  length * length * length;
+// 	const calculateArea = 6 * (length * length);
+// 	return `Объем куба: ${calculateVolume}, площадь всей поверхности: ${calculateArea}`;
+// }
+// console.log(calculateVolumeAndArea(-5));
+
+
+
+// function getCoupeNumber(seatNumber) {
+// 	if (seatNumber > 36 || seatNumber === 0) {
+// 		return `Таких мест в вагоне не существует`;
+// 	} 
+	
+// 	if (seatNumber !== Math.round(seatNumber) || seatNumber < 0 || seatNumber === '') {
+// 		return `Ошибка. Проверьте правильность введенного номера места`;
+// 	}
+// // let seatNumber = 25;
+// 	for (let i = 4; i <= 36; i = i + 4) {
+// 		if (seatNumber <= i) {
+// 			// console.log(i);
+// 				return Math.ceil(i / 4);
+// 			}
+// 	} 
+// }
+// console.log(getCoupeNumber(33));
