@@ -1017,3 +1017,66 @@
 // const {border, bg} = options.colors;
 // console.log(bg);
 
+
+// <!--Массивы и псевдомассивы-->
+
+// const arr = [1, 2 , 3, 6, 8];
+
+// arr.pop(); //удаляет последний объект
+// arr.push(10); //добавляет в конец массива указанный элемент
+
+// console.log(arr);
+
+//            перебор массива
+
+//   1
+// const arr = [1, 2 , 3, 6, 8];
+
+// for (let i = 0; i < arr.length; i++) {
+// 	console.log(arr[i]);
+// }
+// for (let value of arr) {
+// 	console.log(value);
+// }  
+
+//   2
+
+// const arr = [1, 2 , 3, 6, 8];
+// arr[99] = 0;
+// console.log(arr.length);
+// console.log(arr);
+
+// const arr = [1, 2 , 3, 6, 8];
+
+// // callback функции 
+// // item - название, i - номер по порядку массива,
+// // arr - ссылка на массив, который мы перебираем 
+// arr.forEach(function(item, i, arr) {
+// 	console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+//Объединение элементов в массиве
+// const str = prompt("", "");
+// const products = str.split(", ");
+// console.log(products);
+
+// const str = prompt("", "");
+// const products = str.split(", ");
+// console.log(products.join('; '));
+
+// Метод сортировки
+// const str = prompt("", "");
+// const products = str.split(", ");
+// products.sort();
+// console.log(products.join('; '));
+
+// const arr = [1, 22 , 13, 6, 8];
+// arr.sort(compareNum);
+// console.log(arr);
+
+// function compareNum(a, b) {
+// 	return a - b;
+// }
+
+//Псевдомассивы
+
