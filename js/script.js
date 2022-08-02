@@ -855,21 +855,21 @@
 
 // <!--Метод trim-->
 
-// str.trim(); убирает пробелы в начале и конце строки
+// str.trim(); //убирает пробелы в начале и конце строки
 // const a = prompt('Один из последних просмотреных фильмов?', '').trim(),
 
-// let numberOfFilms; 
-
+// let numberOfFilms;
+//
 // function start() {
 // 	numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
-
+//
 // 	while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
 // 		numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 // 	}
 // }
-
+//
 // start();
-
+//
 // const personalMovieDB = {
 // 	count: numberOfFilms,
 // 	movies: {},
@@ -877,7 +877,7 @@
 // 	genres: [],
 // 	privat: false
 // };
-
+//
 // function rememberMyFilms() {
 // 	for (let i = 0; i < 2; i++) {
 // 		const a = prompt('Один из последних просмотреных фильмов?', '').trim(),
@@ -891,9 +891,9 @@
 // 		}
 // 	}
 // }
-
+//
 // rememberMyFilms();
-
+//
 // function detecPersonalevel () {
 // 			if (personalMovieDB.count < 10) {
 // 				console.log("Просмотренно довольно мало фильмов");
@@ -905,17 +905,17 @@
 // 				console.log("Произошла ошибка");
 // 			}
 // 		}
-
+//
 // detecPersonalevel ();
-
+//
 // function showMyDB (hidden) {
 // 	if (!hidden) {
 // 		console.log(personalMovieDB);
 // 	}
 // }
-
+//
 // showMyDB(personalMovieDB.privat);
-
+//
 // function writeYourGenres () {
 // 	for (let i = 1; i <= 3; i++) {
 // 		// const genre = prompt(`Ваш любимый жанр под номером ${i}`);
@@ -923,7 +923,7 @@
 // 		personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
 // 	}
 // }
-
+//
 // writeYourGenres ();
 
 // <!-- CallBack - функции-->
@@ -934,11 +934,11 @@
 // 		console.log(1);
 // 	}, 500);
 // }
-
+//
 // function second() {
 // 	console.log(2);
 // }
-
+//
 // first();
 // second();
 
@@ -948,9 +948,9 @@
 // 	console.log(`Я учу: ${lang}`);
 // 	callback();
 // }
-// // learnJS('JavaScript', function() {
-// // 	console.log('Я прошел этот урок!');
-// // });
+// learnJS('JavaScript', function() {
+// 	console.log('Я прошел этот урок!');
+// });
 // function done () {
 // 	console.log('Я прошел этот урок!');
 // }
@@ -972,7 +972,7 @@
 // 		console.log('Test');
 // 	}
 // };
-
+//
 // options.makeTest();
 
 // console.log(Object.keys(options));
@@ -1059,7 +1059,7 @@
 // const str = prompt("", "");
 // const products = str.split(", ");
 // console.log(products);
-
+//
 // const str = prompt("", "");
 // const products = str.split(", ");
 // console.log(products.join('; '));
@@ -1080,3 +1080,96 @@
 
 //Псевдомассивы
 
+// <!--Передача по ссылке или по значению, Spread операторы (ES6 ES9)-->
+
+// let a = 5,
+//     b = a;
+//
+// b = b + 5;
+//
+// console.log(b);
+// console.log(a);
+//
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj; // Ссылку
+// copy.a = 10;
+// console.log(copy);
+// console.log(obj);
+
+// Поверхосные копии
+
+// function copy(mainObj) {
+//     let objCopy = {};
+//
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
+//
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+//
+// const newNumbers = copy(numbers);
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+// // console.log(newNumbers);
+// // console.log(numbers);
+//
+// // второй метод assing
+//
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+//
+// // console.log(Object.assign(numbers, add)) // независимая поверхсная копия обьекта
+//
+// const clone = Object.assign({}, add)
+// clone.d = 20;
+// // console.log(add);
+// // console.log(clone);
+//
+// // третий метод создания поверхосных копий
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice(); // позволяет скопировать старый массив
+// newArray[1] = 'asdbjsah';
+// console.log(newArray);
+// console.log(oldArray);
+//
+// // 4й метод, оператор разворота, spread operator
+//
+// const video = ['youtube', 'vimeo', 'rutube'],
+//     blogs = ['wordpress', 'livejournal', 'blogger'],
+//     internet = [...video, ...blogs, 'vk', 'facebook'];
+//
+// console.log(internet);
+//
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const num = [2, 5, 7];
+// log(...num);
+//
+// const array = ['a', 'b'];
+// const newArray = [...array];
+//
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+// const newObj = {...q};
+// console.log(newObj);
