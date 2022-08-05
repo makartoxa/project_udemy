@@ -1507,3 +1507,34 @@
 
 // // 3.
 // console.log(typeof(!!'4'));
+
+<!--Замыкание и лексическое окружение-->
+
+// let number = 5; debugger
+// function youNumber () {
+//     console.log(number);
+// }
+// number = 6;
+// youNumber(); debugger
+//
+// number = 8;
+// youNumber(); debugger
+
+// function createCounter () {
+//     let counter = 0;
+//
+//     console.log('c', c);
+//     const myFunction = function () {debugger
+//          counter += 1;debugger
+//          return counter;debugger
+//     }
+//
+//     return myFunction;
+// }
+// debugger
+// const increment = createCounter();debugger
+// const c1 = increment();debugger
+// const c2 = increment();debugger
+// const c3 = increment();debugger
+//
+// console.log(c1, c2, c3);
