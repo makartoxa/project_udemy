@@ -1613,3 +1613,68 @@
 //
 // const oneHeart = document.querySelector('.heart');
 // console.log(oneHeart);
+
+<!--Действие с элементами на странице-->
+
+// const box = document.getElementById('box'),
+//     btns = document.getElementsByTagName('button'),
+//     circles = document.getElementsByClassName('circle'),
+//     hearts = document.querySelectorAll('.heart'),
+//     oneHeart = document.querySelector('.heart'),
+//     wrapper = document.querySelector('.wrapper');
+//
+// // const wrapper = document.querySelector('.wrapper'),
+// //     hearts = wrapper.querySelectorAll('.heart'),
+// //     oneHeart = wrapper.querySelector('.heart'); // Получение элементов
+//
+// // console.dir(box);
+// // box.style.backgroundColor = 'blue';
+// // box.style.width = '500px';
+//
+// box.style.cssText = 'background-color: blue; width: 500px;';
+//
+// btns[1].style.borderRadius = '100%';
+//
+// circles[0].style.backgroundColor = 'red';
+//
+// // for ( let i = 0; i < hearts.length; i++ ) {
+// //     hearts[i].style.backgroundColor = 'blue';
+// // }
+//
+// hearts.forEach(item => {
+//     item.style.backgroundColor = 'blue';
+// })
+//
+// const div = document.createElement('div');
+// // const text = document.createTextNode('Тут был я!');
+//
+// div.classList.add('black');
+// // document.querySelector('.wrapper').append(div);
+//
+// // Манипуляция положением элементов
+//
+// // wrapper.append(div) // Вставить div в конец класса wrapper
+// // wrapper.appendChild(div) //Старая версия, Вставить div в конец класса wrapper
+//
+// // wrapper.prepend(div) // Вставить div в конец класса wrapper
+//
+// // hearts[0].before(div); // Вставить перед hearts[0]
+// // hearts[0].after(div); // Вставить после hearts[0]
+// // wrapper.insertBefore( div, hearts[2] ); // Старая версия вставить перед
+//
+// // circles[0].remove(); // Удалить элемент под индексом 0
+// // wrapper.removeChild(hearts[1]); // Старая версия удаления элемента, через обращение к родителям
+//
+// // hearts[0].replaceWith(circles[0]); // Заменить один элеиент на другой
+// // wrapper.replaceChild(circles[0], hearts[0]); //Старая версия замены элемента
+//
+// // Добавление текста или html-code прямо в элементы
+//
+// wrapper.append(div) // Добавим div в конец класса wrapper
+//
+// // div.innerHTML = "<h1>Hello World</h1>"; //В том случае, когда мы работаем со страницей! Вставка текста или HTML code в элемент
+//
+// // div.textContent = "Hello"; // Если даные, будут получены от пользователя, в целях безопасности. Вставка только текста
+//
+// div.innerHTML = "<h1>Hello World</h1>";
+// div.insertAdjacentHTML('afterend', '<h2>Hello</h2>');
