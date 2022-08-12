@@ -1792,3 +1792,17 @@
 //
 // console.log(result[0] / result[1]);
 
+//// Факториал через рекурсию
+
+// function factorial(n) {
+//     if (n <= 1 ) {
+//         return 1;
+//     } if (n % 1 !== 0 || typeof(n) !== "number" ) {
+//         return `Проверте введенное число`
+//     } else {
+//         return n * factorial(n -1)
+//     }
+// }
+//
+// console.log(factorial(4.5));
+
